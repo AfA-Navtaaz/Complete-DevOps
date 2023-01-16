@@ -1,0 +1,20 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+   name: complete
+spec:
+   replicas: 2
+   selector:      # tells the controller which pods to watch/belong to
+    matchLabels:
+     app: complete
+   template:
+      metadata:
+        labels:
+          app: complete
+      spec:
+       containers:
+        - name: complete
+          image: navtaaz/complete
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 80
