@@ -4,7 +4,7 @@ metadata:
    name: complete
 spec:
    replicas: 2
-   selector:      # tells the controller which pods to watch/belong to
+   selector:      
     matchLabels:
      app: complete
    template:
